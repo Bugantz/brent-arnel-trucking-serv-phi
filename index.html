@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brent and Arnel's Trucking Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f5f6fa;
+      color: #2c3e50;
+      overflow-y: hidden;
+      text-align: center;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #2c3e50;
+      padding: 15px 0;
+      z-index: 999;
+      opacity: 0;
+      transform: translateY(-50px);
+      transition: 0.3s ease;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #f1c40f;
+    }
+
+    .landing {
+      position: relative;
+      height: 100vh;
+      background: url('truck.jpg') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+    }
+
+    .landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .landing-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .landing h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+
+    .landing button {
+      background-color: #f1c40f;
+      border: none;
+      color: #2c3e50;
+      font-weight: bold;
+      padding: 12px 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background 0.3s;
+    }
+
+    .landing button:hover {
+      background-color: #e1b20d;
+    }
+
+    .section {
+      padding: 60px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .box-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .box {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+      padding: 25px;
+      width: 320px;
+      transition: transform 0.3s;
+    }
+
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    .box h3 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+
+    .truck-unit-box {
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.07);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+
+    .truck-unit-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .truck-text {
+      padding: 20px;
+    }
+
+    .truck-text h3 {
+      margin-top: 0;
+      color: #27ae60;
+    }
+
+    .truck-img img {
+      width: 100%;
+      height: px;
+    }
+
+    .statement-box {
+      max-width: 800px;
+      background: #ffffff;
+      border-left: 6px solid #2980b9;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+      margin-bottom: 40px;
+    }
+
+    .statement-box h2 {
+      margin-top: 0;
+      color: #2980b9;
+    }
+
+    .rates-box {
+      max-width: 800px;
+      padding: 30px;
+      background-color: #fdfdfd;
+      border: 2px dashed #7f8c8d;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #7f8c8d;
+      padding: 40px 20px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#main-content">Home</a></li>
+      <li><a href="#truck-units">Units</a></li>
+      <li><a href="#rates">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <header class="landing">
+    <div class="landing-content">
+      <h1>Trucking across the Philippines, made easy.</h1>
+      <button id="enter-site">Contact Us</button>
+    </div>
+  </header>
+
+  <div id="main-content">
+    <h1 style="margin-top: 100px;">Driven to Deliver, Built to Last.</h1>
+    <section class="section">
+      <div class="box-grid">
+        <div class="box">
+          <h3>Our Services</h3>
+          <p>We transport construction materials across the Philippines using a fully insured, compliant, and well-maintained fleet. From 6-wheelers to 12-wheelers, we handle jobs of any scale with efficiency.</p>
+        </div>
+        <div class="box">
+          <h3>Industry</h3>
+          <p>We provide inland logistics solutions anywhere in the Philippines. With a fully insured fleet and a commitment to compliance, we ensure seamless and secure transportation, reducing risks for our clients</p>
+        </div>
+        <div class="box">
+          <h3>Why Choose Us</h3>
+          <p>Trusted since 2019, we’ve grown fivefold and proven ourselves in reliability, safety, and professionalism.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="statement-box">
+        <h2 id="mission-title">MISSION</h2>
+        <p>At Brent and Arnel Trucking Services, we don’t just transport goods—we drive success. Our mission is to redefine inland logistics by delivering superior service that empowers businesses across the Philippines.</p>
+      </div>
+      <div class="statement-box">
+        <h2 id="vision-title">VISION</h2>
+        <p>To be the leading provider of innovative and sustainable logistics solutions, transforming the way goods are transported and delivered globally. We strive to be a trusted partner for our clients, a great place to work for our employees, and a valuable contributor to the communities we serve.</p>
+      </div>
+    </section>
+
+    <section class="section" id="truck-units">
+      <h2>Our Truck Units</h2>
+      <div class="box-grid">
+        <div class="truck-unit-box">
+          <div class="truck-text">
+            <h3>Two 6-Wheeler Units</h3>
+            
+          </div>
+          <div class="truck-img">
+            <img src="final1.jpg" alt="6-Wheeler Truck">
+          </div>
+        </div>
+        <div class="truck-unit-box">
+          <div class="truck-text">
+            <h3>12-Wheeler Unit</h3>
+            
+          </div>
+          <div class="truck-img">
+            <img src="final2.jpg" alt="12-Wheeler Truck">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="rates">
+      <h2>Contact Us!</h2>
+      <div class="rates-box">
+        <p>📞 +63 966 482 5382<br>
+     📧 brentandarneltruckingservices@gmail.com<br>
+     📍 Sitio Pasong Kalabaw, Brgy. Lamesa, Calamba City, Laguna
+  </p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      © 2025 Brent and Arnel's Trucking Services. All rights reserved.
+    </footer>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollToPlugin.min.js"></script>
+  <script>
+    window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+    gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const navbar = document.querySelector(".navbar");
+      const body = document.body;
+      const contactBtn = document.querySelector("#enter-site");
+      const content = document.querySelector("#main-content");
+
+      body.style.overflow = "hidden";
+
+      contactBtn.addEventListener("click", () => {
+        body.style.overflow = "auto";
+        gsap.to(window, {
+          duration: 0.4,
+          scrollTo: content.offsetTop,
+          ease: "ease"
+        });
+      });
+
+      let isVisible = false;
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50 && !isVisible) {
+          gsap.to(navbar, { opacity: 1, y: 0, duration: 0.2 });
+          isVisible = true;
+        } else if (window.scrollY <= 50 && isVisible) {
+          gsap.to(navbar, { opacity: 0, y: -50, duration: 0.2 });
+          isVisible = false;
+        }
+      });
+
+      gsap.utils.toArray(".box, .truck-unit-box, .statement-box, .rates-box").forEach(box => {
+        gsap.from(box, {
+          scrollTrigger: {
+            trigger: box,
+            start: "top 85%",
+            toggleActions: "play none none none"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.6,
+          ease: "power2.out"
+        });
+      });
+
+      gsap.from("#mission-title", {
+        scrollTrigger: "#mission-title",
+        scale: 0.3,
+        rotate: -20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "back.out(1.7)"
+      });
+
+      gsap.from("#vision-title", {
+        scrollTrigger: "#vision-title",
+        scale: 0.3,
+        rotate: 20,
+        opacity: 0,
+        duration: 0.6,
+        ease: "back.out(1.7)"
+      });
+    });
+  </script>
+</body>
+</html>
